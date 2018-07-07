@@ -1,0 +1,416 @@
+:root {
+  --Comm-Mainblue: #2B4A6F;
+  --Comm-Black: #010A16;
+  --Comm-White: #C1CEDC;
+  --Comm-Gray: #697E97;
+  --Comm-DarkestBlue: #062448;
+  --Comm-Font: 'Roboto', sans-serif;
+  --Comm-BlueResaltante: #37AEDF;
+  --Comm-LighterBlack: #333;
+}
+
+/*---------------CONTAINER------------------*/
+
+body {
+  margin: 0;
+  background: var(--Comm-White);
+  font: 300 20px var(--Comm-Font);
+  width: 100%;
+}
+
+.Checklist {
+  width: 100%;
+  padding: 0px;
+}
+
+/*----------------TITLE-------------------*/
+
+.Checklist h2.ChecklistTitle {
+  font-family: var(--Comm-Font);
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: var(--Comm-DarkestBlue);
+  margin: 0px;
+  padding: 20px;
+}
+
+/*----------------STATS-----------------------*/
+
+.Checklist .StatsDiv .ItemsPercent {
+  display: flex;
+  justify-content: center;
+}
+
+.Checklist .StatsDiv {
+  background-color: var(--Comm-Mainblue);
+  color: white;
+}
+
+.Checklist .StatsDiv .loadingBar{
+ background-color: var(--Comm-BlueResaltante);
+}
+
+.Checklist .StatsDiv #statsNumbers{
+  color: white;
+  font-weight: bolder;
+}
+
+/*--------------ADD ITEM---------------------*/
+
+.Checklist .ChecklistAddItemRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Checklist .AddItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Checklist .AddItemButtonIcon {
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 0px;
+}
+
+.Checklist .AddItemButtonIcon:hover {
+  color: var(--Comm-Gray);
+  font-size: 2.5em;
+  transition: 0.1s;
+}
+
+.Checklist input, input:focus {
+  transition: .4s all;
+  padding: 18px 20px;
+  border-radius: 4px;
+  font: 400 16px var(--Comm-Font);
+  background: white;
+  border: none;
+  color: #666;
+  outline: 0;
+  width: 100%;
+}
+
+.Checklist .remainingChars{
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Comm-BlueResaltante);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/*-----------CHECKLIST--&--ITEMS---------*/
+
+.Checklist .ItemList {
+  transition: .4s all;
+  border-radius: 4px;
+  font: 400 16px var(--Comm-Font);
+  background: white;
+  border: none;
+  color: #666;
+  outline: 0;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.Checklist p{
+  margin-bottom: 0px;
+}
+
+.Checklist .ItemList .ItemDiv{
+  padding: 9px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+ 
+  min-height: 50px;
+  align-items: center;
+}
+
+.Checklist .ItemList .ItemDivDone{
+  padding: 9px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+
+  min-height: 50px;
+  align-items: center;
+  /*Edita aqui para hacer diferentes los item divs cuando esten listos.*/
+}
+
+.Checklist .ItemList .ItemP {
+  cursor: pointer;
+  min-height: 24px;
+  word-wrap: break-word;
+  height: 100%;
+}
+
+.Checklist .ItemList .ItemPDone{
+  cursor: pointer;
+  min-height: 24px;
+  word-wrap: break-word;
+  height: 100%;
+
+  text-decoration: line-through;
+  /*Edita aqui para hacer diferentes los item divs cuando esten listos.*/
+}
+
+.Checklist .ItemList .ItemDiv:hover{
+  transition: 0.1s;
+  background-color: #9aa0a7;
+  color: white;
+}
+.Checklist .ItemList .ItemDivDone:hover{
+  transition: 0.1s;
+  background-color: #9aa0a7;
+  color: white;
+}
+
+.Checklist .ItemList .ItemDiv:hover .DeleteIcon,
+.Checklist .ItemList .ItemDiv:hover .notMarked,
+.Checklist .ItemList .ItemDiv:hover .Marked{
+  transition: 0.1s;
+  color: #5f5f5f;
+}
+
+.Checklist .ItemList .ItemDivDone:hover .DeleteIcon,
+.Checklist .ItemList .ItemDivDone:hover .notMarked,
+.Checklist .ItemList .ItemDivDone:hover .Marked{
+  transition: 0.1s;
+  color: #5f5f5f;
+}
+
+.Checklist .ItemList .TaskOptions{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Checklist .ItemList .TaskOptions .iconContainer {
+  background-color: #ececec;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Checklist .ItemList .TaskOptions .DeleteIcon {
+  font-size: 1.6em;
+  color: #969696;
+  display: flex;
+  cursor: pointer;
+}
+
+.Checklist .ItemList .TaskOptions .notMarked {
+  font-size: 1.6em;
+  color: #969696;
+}
+.Checklist .ItemList .TaskOptions .Marked {
+  font-size: 1.6em;
+  color: #969696;
+}
+
+.Checklist .ItemList .iconContainer:hover{
+  box-shadow: 0 2px 5px rgba(0,0,0,.50);
+  transition: 0.1s;
+}
+
+/*---------delete items -----------*/
+
+.Checklist .trashedItemsIcon{
+  font-size: 2em;
+  color: var(--Comm-Mainblue);
+  cursor: pointer;
+  margin-bottom: 10px;
+  
+}
+.Checklist .trashedItemsIcon:hover{
+  transition: 0.1s;
+  color: var(--Comm-DarkestBlue);
+}
+
+/*---------Finished Announce-------------*/
+
+.Checklist .FinishedAnnounce {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Comm-Mainblue);
+  color: white;
+  margin-top: 30px;
+
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.Checklist .FinishedAnnounce .announceIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Checklist .FinishedAnnounce .hideButton {
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.Checklist .FinishedAnnounce .hideButton:hover {
+  color: var(--Comm-BlueResaltante);
+  transition: 0.1s;
+}
+
+
+.Checklist .FinishedAnnounce .announceButton {
+  font-size: 3em;
+  margin-top: 10px;
+  margin-bottom:  10px;
+  cursor: pointer;
+}
+
+.Checklist .FinishedAnnounce .announceButton:hover{
+  color: green;
+  transition: 0.1s;
+}
+
+.Checklist .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/*------------------Draggable items----------------*/
+
+.Checklist .sortable-ghost{ 
+  color: white;
+  background-color: var(--Comm-BlueResaltante);
+}
+
+/*------------------Delete Confirmation----------------*/
+
+.Checklist .DeleteConfirmation-Transparency {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Checklist .DeleteConfirmation{
+  height: 75%;
+  width: 50%;
+  max-height: 200px;
+  max-width: 600px;
+  min-height: 200px;
+  min-width: 367px;
+  background-color: var(--Comm-DarkestBlue);
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  color: white; 
+  font-family: var(--Comm-Font);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Checklist .DeleteTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  border-width: 1px 0;
+  padding: 5px 0;
+  margin: 0px;
+}
+
+.Checklist .DeleteTitleH3 {
+  margin-top: 0px; 
+  margin-bottom: 0px;
+}
+
+.Checklist .DeleteConfirmation .DeleteOptions{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+.Checklist .DeleteConfirmation .infoIcon{
+  font-size: 3em;
+}
+
+.DeleteConfirmation .DeleteOptions .deleteIcon{
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.DeleteConfirmation .DeleteOptions .keepIcon{
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.DeleteConfirmation .DeleteOptions .deleteIcon:hover{
+  transition: 0.2s;
+  color: red;
+}
+
+.DeleteConfirmation .DeleteOptions .keepIcon:hover{
+  transition: 0.2s;
+  color: green;
+}
+
+
+/*------------------END----------------*/
+
+
+@media (min-width: 576px) {
+  .Checklist .remainingChars{
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) { 
+  .Checklist .remainingChars{
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 992px) { 
+  .Checklist .remainingChars{
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 1200px) { 
+  .Checklist .remainingChars{
+    font-size: 1.5em;
+  }
+}
