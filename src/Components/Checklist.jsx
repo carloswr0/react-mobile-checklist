@@ -202,7 +202,7 @@ class Checklist extends Component {
                     /> : null
                 }
                 {
-                    this.state.showDeleteConfirmation ? 
+                    this.state.showInfoModal ? 
                     <InfoModal
                         cancelDelete={this.cancelDeleteConfirmation}
                         removeItem={this.removeItem}
